@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>INICIO</ion-title>
+  </ion-toolbar>
+  
+  <ion-toolbar color="mycolor">
+   <!--<ion-title>Catálogo</ion-title>-->
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button routerLink="/create">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-content>
+  <h3>PRODUCTOS</h3>
+  <ion-card *ngFor="let producto of malabares">
+    <ion-item>
+
+      <ion-avatar slot="end">
+        <ion-icon clear (click)="removeUser(producto)" name="trash-outline"></ion-icon>
+      </ion-avatar>
+
+      
+  
+      <ion-avatar slot="end">
+        <ion-icon routerLink="/update" name="create"></ion-icon>
+      </ion-avatar>
+
+    </ion-item>
+    <img src="../../assets/img/{{producto.img}}" />
+    <ion-card-header>
+      <ion-card-title>{{producto.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+   {{producto.descripcion}}
+    </ion-card-content>
+    
+  </ion-card>
+
+</ion-content>
+  

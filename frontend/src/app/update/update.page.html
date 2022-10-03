@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modificar producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="updateUserFg" (ngSubmit)="onSubmit()">
+      
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="nombre" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input formControlName="descripcion" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Imágen (URL)</ion-label>
+        <ion-input formControlName="img" type="text" required>
+        </ion-input>
+      </ion-item>      
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="success" expand="block">Aceptar</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+          <ion-button routerLink="/home" color="secondary" expand="block">Volver</ion-button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+  </ion-list>
+</ion-content>
