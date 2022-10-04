@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+//import { url } from 'inspector';
 
 @Injectable({
   providedIn: 'root'
@@ -20,3 +21,10 @@ export class MalabaresService {
   }
 
 }
+   
+
+
+
+
+
+// const url = BASE_URL + supplant(DELETE_PRODUCTO_ENDPOINT, {idproducto: params.id});

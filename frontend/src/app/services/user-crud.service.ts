@@ -60,7 +60,7 @@ export class UserCrudService {
     return this.httpClient.delete<User[]>(this.endpoint + '/' + id, this.httpOptions)
       .pipe(
         tap(_ => console.log(`User deleted: ${id}`)),
-        catchError(this.handleError<User[]>('Delete user'))
+        catchError(this.handleError<User[]>('Delete protuct'))
       );
   }
 

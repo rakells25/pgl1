@@ -35,7 +35,7 @@ export class HomePage {
     })
   }
 
-  removeUser(producto, i) {
+  removeProduct(producto, i) {
     if (window.confirm('¿Estás seguro de que quieres eliminar este producto?')) {
       this.userCrudService.deleteUser(producto.id)
       .subscribe(() => {

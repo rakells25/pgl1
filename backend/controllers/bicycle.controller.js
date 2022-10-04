@@ -17,7 +17,16 @@ exports.update = ( req, res ) => {
 };
 // Delete a Bicycle with the specified id in the request
 exports.delete = ( req, res ) => {
-  
+  Bicycle.destroy({
+    where : { id: req.params.id }
+  })
+  .then( data => {
+    res.status(200).send({ message: 'producto eliminado.'});
+  }).catch( err =>{
+    req.status(500).send({
+      message: err.message || 'Error al intentar eliminar el producto.'
+    })
+  });
 };
 
 // Create and Save a new Bicycle
