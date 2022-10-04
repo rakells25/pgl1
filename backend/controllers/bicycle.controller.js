@@ -2,9 +2,6 @@ const db = require ("../models");
 const Bicycle = db . bicycles;
 const Op = db.Sequelize.Op;
 
-// Create and Save a new Bicycle
-exports.create = (req, res) => {
-};
 
 // Retrieve all Bicycles from the database .
 exports.findA11 = (req, res) => {
@@ -14,11 +11,27 @@ exports.findOne = ( req, res ) => {
 };
 // Update a Bicycle by the id in the request
 exports.update = ( req, res ) => {
+  if(req.body.status --- undefined){
+    res.status(400).send({message: 'Debe rellenar los campos.'});
+    return
+  }
+  Bicycle.update({
+    status: req.body.status
+  },{
+    where : { idproducto: req.params.idproducto}
+  })
+  .then( data =>{
+    res.status(200).send(data);
+  }).catch( err => {
+    res.status(500).send({
+      message: err.message || 'Some error happened while updating.'
+    })
+  });
 };
 // Delete a Bicycle with the specified id in the request
 exports.delete = ( req, res ) => {
   Bicycle.destroy({
-    where : { id: req.params.id }
+    where : { idproducto: req.params.idproducto }
   })
   .then( data => {
     res.status(200).send({ message: 'producto eliminado.'});
@@ -32,7 +45,7 @@ exports.delete = ( req, res ) => {
 // Create and Save a new Bicycle
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.brand) {
+    if (!req.body.nombre) {
       res.status(400).send({
         message : "Content can not be empty!"
       });
@@ -40,8 +53,11 @@ exports.create = (req, res) => {
     }
     // Create a Bicycle
     const bicycle = {
-      brand : req.body.brand ,
-      model : req.body.model
+      
+      nombre: req.body.nombre,
+      descripcion: req.body.descripcion,
+      img: req.body.img,
+
     };
     // Save Bicycle in the database
     Bicycle.create(bicycle)

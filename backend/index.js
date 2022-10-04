@@ -29,7 +29,7 @@ db.sequelize.sync({ force : false }).then(() => {
 
 // simple route
 app.get ("/", (req , res) => {
-  res.json({message: "Welcome to Malabaracirco application." });
+  res.json({message: "Bienvenido a la aplicación de Malabaracirco." });
 });
 
 

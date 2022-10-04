@@ -14,6 +14,7 @@ export class HomePage {
   malabares: any = [];
   producto: any = [];
 
+
   //constructor(private router: Router) {}
 
   constructor(private malabaresService: MalabaresService, private userCrudService: UserCrudService, private router: Router) {}
@@ -35,9 +36,9 @@ export class HomePage {
     })
   }
 
-  removeProduct(producto, i) {
+  deleteProducto(producto) {
     if (window.confirm('¿Estás seguro de que quieres eliminar este producto?')) {
-      this.userCrudService.deleteUser(producto.id)
+      this.userCrudService.deleteUser(producto.nombre)
       .subscribe(() => {
           this.ionViewDidEnter();
           console.log('Producto eliminado!')
@@ -46,4 +47,5 @@ export class HomePage {
     }
   }
 
+ 
 }

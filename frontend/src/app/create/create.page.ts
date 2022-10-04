@@ -14,6 +14,10 @@ export class CreatePage implements OnInit {
 
   userForm: FormGroup;
 
+  nombre: string;
+  descripcion: string;
+  img: string;
+
   constructor(
     private router: Router,
     public formBuilder: FormBuilder,
@@ -21,6 +25,7 @@ export class CreatePage implements OnInit {
     private userCrudService: UserCrudService    
   ) {
     this.userForm = this.formBuilder.group({
+  
       nombre: [''],
       descripcion: [''],
       img: ['']
@@ -37,10 +42,12 @@ export class CreatePage implements OnInit {
         .subscribe((response) => {
           this.zone.run(() => {
             this.userForm.reset();
-            this.router.navigate(['/list']);
+            this.router.navigate(['/home']);
           })
         });
     }
   }
+
+
 
 }

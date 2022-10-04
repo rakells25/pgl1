@@ -17,7 +17,7 @@ export class User {
 
 export class UserCrudService {
 
-  endpoint = 'http://localhost:3000/users';
+  endpoint = 'http://localhost:8080/api/bicycles/';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -48,18 +48,18 @@ export class UserCrudService {
       );
   }
 
-  updateUser(id, user: User): Observable<any> {
-    return this.httpClient.put(this.endpoint + '/' + id, JSON.stringify(user), this.httpOptions)
+  updateUser(nombre, user: User): Observable<any> {
+    return this.httpClient.put(this.endpoint + '/' + JSON.stringify(user), this.httpOptions)
       .pipe(
-        tap(_ => console.log(`User updated: ${id}`)),
+        tap(_ => console.log(`User updated: ${nombre}`)),
         catchError(this.handleError<User[]>('Update user'))
       );
   }
 
-  deleteUser(id): Observable<User[]> {
-    return this.httpClient.delete<User[]>(this.endpoint + '/' + id, this.httpOptions)
+  deleteUser(idproducto): Observable<User[]> {
+    return this.httpClient.delete<User[]>(this.endpoint + '/' + idproducto, this.httpOptions)
       .pipe(
-        tap(_ => console.log(`User deleted: ${id}`)),
+        tap(_ => console.log(`User deleted: ${idproducto}`)),
         catchError(this.handleError<User[]>('Delete protuct'))
       );
   }

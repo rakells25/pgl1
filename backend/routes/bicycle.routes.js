@@ -3,7 +3,7 @@ module.exports = app => {
    var router = require("express").Router();
 
    // Create a new Bicycle
-router.post("/add", bicycles.create);
+router.post("/", bicycles.create);
 
 // Retrieve all Bicycles
 router.get("/", bicycles.findAll);
@@ -15,7 +15,7 @@ router.get("/:id", bicycles.findOne);
 router.put("/:id", bicycles.update);
 
 // Delete a Bicycle with id
-router.delete("/:id", bicycles.delete);
+router.delete("/:idproducto", bicycles.delete);
 app.use('/api/bicycles', router);
 
 };
