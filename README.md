@@ -1,53 +1,63 @@
-#Malabaracirco
-Es un proyecto enfocado a una tienda de malabares donde se pueda llevar un control de los productos disponibles en la tienda.
+<h1>Malabaracirco</h1>
+<br>
+<h3>#Presentación</h3>
+<p>Aplicación de Malabaracirco con IONIC + EXPRESS + SEQULIZE + MYSQL</p>
+<p>Es un proyecto enfocado a una tienda de malabares donde se pueda llevar un control de los productos disponibles en la tienda.</p>
+<br>
+<h3>#Comenzando 🚀</h3>
+<p>Esta aplicación está pensada para dar al usuario la opción de listar, insertar, modificar y eliminar productos.</p>
+<br>
 
-#Comenzando 🚀
-Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
+<h3>#Instalación 🔧</h3>
+<p>Para ejecutar la aplicación, debe ingresar al directorio backend con el siguiente comando: "cd backend". Una vez que lo haya ahí, el siguiente comando a usar es: "node index.js".</p>
 
-Mira Deployment para conocer como desplegar el proyecto.
+<p>En segundo lugar, regrese a la carpeta raíz: "cd ..". Después, acceda a la interfaz: "cd frontend". Por último, escriba: "ionic serve" para ejecutar el programa.</p>
 
-#Pre-requisitos 📋
-Visual studio code
-Xampp
+<p>Con esto, podrá usar la aplicación correctamente y observar el listado de productos, insertar e interactuar con las interfaces.</p>
 
-#Da un ejemplo
-Instalación 🔧
-Abrir proyecto desde una consola, como puede ser desde la consola de visual studio code.
-Y activar Apache y MySQL desde Xampp.
+<p>Si desea introducir uno nuevo, haga clic en el botón que aparece arriba a la derecha "+" para insertarlo.</p>
+
+<p>Ahí le aparecerá un formulario donde escribir los datos a introducir. Una vez hecho, haz click para enviar los datos a la base de datos y te enviará a la página de inicio donde podrá ver el producto insertado.</p>
+
+<br>
+
+<h3>#Ejecutando las pruebas ⚙️</h3>
+<p>Ejecutar el Xampp y crear la base de datos</p>
+<p>En el backend: node index.js</p>
+<p>En el frontend: ionic serve</p>
+
+<br>
+
+<h3>#Construido con 🛠️</h3>
+<ul>
+<li>Ionic</li>
+<li>React</li>
+<li>Node.js</li>
+<li>express.js</li>
+<li>Sequelize</li>
+<li>Mysql </li>
+</ul>
+
+<br>
+
+<h3>#Autores ✒️</h3>
+<p>Raquel López Sánchez</p>
+
+<br>
+
+<h3>#Expresiones de Gratitud 🎁</h3>
+<ul>
+<li>Comenta a otros sobre este proyecto 📢</li>
+<li>Invita una cerveza 🍺 o un café ☕.</li>
+<li>Da las gracias 🤓.</li>
+</ul>
+
+<br>
+
+<h3>#Postman</h3>
+
+http://localhost:8080
+<br>
+http://localhost:8080/api/bicycles/
 
 
-#Ejecutando las pruebas ⚙️
-Ejecutar el backend y el frontend para visualizar la aplicación
-
-
-#Construido con 🛠️
-Visual studio code - Editor de código fuente
-Ionic - Framework
-Mysql - Sistema de gestión de bases de datos
-
-#Contribuyendo 🖇️
-Por favor lee el CONTRIBUTING.md para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-
-#Versionado 📌
-Usamos SemVer para el versionado.
-
-#Autores ✒️
-Raquel López Sánchez
-
-#Licencia 📄
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo LICENSE.md para detalles
-
-#Expresiones de Gratitud 🎁
-Comenta a otros sobre este proyecto 📢
-Invita una cerveza 🍺 o un café ☕.
-Da las gracias 🤓.
-
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
