@@ -31,7 +31,6 @@
 <h3>#Construido con 🛠️</h3>
 <ul>
 <li>Ionic</li>
-<li>React</li>
 <li>Node.js</li>
 <li>express.js</li>
 <li>Sequelize</li>
